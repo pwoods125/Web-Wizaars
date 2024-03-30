@@ -10,7 +10,22 @@
 </head>
 
 <body>
-      {{{body}}}
+  <div>
+    <header> 
+      <h1>Ultimate Gamers Portal</h1>
+    </header>
+    <nav>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">GAMEOVER</button>
+    {{else}}
+    <a href="/views/login.handlebars">Signup/Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    {{{body}}}
+  </main>
+  </div>
+
 </body>
 
 </html>
