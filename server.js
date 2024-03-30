@@ -20,14 +20,13 @@ app.use(session(sess));
 
 const hbs = exphbs.create({})
 
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-app.set('views', './views');
 
 app.get("/", async (req, res) => {
   res.render('home')
@@ -38,8 +37,10 @@ app.get("/login", async (req, res) => {
 });
 
 app.get("/landing", async (req, res) => {
-  req.session.loggedIn = true;
-  res.render('landing')
+ 
+  res.render('landing', {
+    loggedIn: req.session.loggedIn
+  });
 });
 
 app.get("/logout", async (req, res) => {
