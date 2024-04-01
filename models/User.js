@@ -38,7 +38,7 @@ User.init(
       },
     },
     sequelize,
-  }
+  },
 );
 
 module.exports = User;

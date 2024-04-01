@@ -1,0 +1,64 @@
+<div class="add-game-container">
+    <h2>
+        What game would you like to add to your library?
+    </h2>
+    <form class="new-game-form">
+        <label for="game_name">
+            Title:
+        </label>
+        <br />
+        <textarea id="game_name" name="game_name" rows="2" cols="30">
+      {{game_name}}
+    </textarea>
+        <br />
+        <label for="console">
+            Console:
+        </label>
+        <br />
+        <textarea id="console" name="console" rows="2" cols="30">
+      {{console}}
+    </textarea>
+        <br />
+        <label for="genre">
+            Genre:
+        </label>
+        <br />
+        <textarea id="genre" name="genre" rows="2" cols="30">
+      {{genre}}
+    </textarea>
+        <br />
+        <label for="comments">
+            Comments on the game:
+        </label>
+        <br />
+        <textarea id="game_comments" name="game_comments" rows="5" cols="30">
+      {{game_comments}}
+    </textarea>
+        <br />
+        <br />
+        {{#if completed}}
+        <input type="checkbox" id="completed" name="completed" Completed />
+        {{else}}
+        <input type="checkbox" id="completed" name="completed" />
+        {{/if}}
+        <label for="completed">
+            Check box if you have completed this game!
+        </label>
+        <br />
+        {{#if favorite}}
+        <input type="favorite" id="favorite" name="favorite" Favorite />
+        {{else}}
+        <input type="checkbox" id="favorite" name="favorite" />
+        {{/if}}
+        <label for="favorite">
+            Check box if this is a favorite game!
+        </label>
+        <br />
+        <button type="submit" value="Submit">
+            Submit
+        </button>
+    </form>
+</div>
+</div>
+
+<script src="/js/addgame.js"></script>

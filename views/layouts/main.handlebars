@@ -5,25 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gamers Portal</title>
-  {{!-- <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  {{!--
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css"> --}}
 </head>
 
 <body>
   <div>
-    <header> 
+    <header>
       <h1>Ultimate Gamers Portal</h1>
     </header>
     <nav>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">GAMEOVER</button>
-    {{else}}
-    <a href="/login">Signup/Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    {{{body}}}
-  </main>
+      {{#if loggedIn}}
+      <button id="logout" class="btn-no-style">GAME OVER</button>
+      {{else}}
+      <a href="/login">Signup/Login</a>
+      {{/if}}
+    </nav>
+    <main>
+      {{{body}}}
+    </main>
   </div>
 
 </body>
