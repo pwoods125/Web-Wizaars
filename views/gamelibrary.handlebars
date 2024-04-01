@@ -1,0 +1,32 @@
+<div>
+    <a href="/addgame">Add A Game to your Library</a>
+</div>
+<div class="gamelibrary-container">
+    <div class="card-header col-md-12 text-center">
+        <h2>
+            Your Game Library
+        </h2>
+    </div>
+    {{#each games as |game|}}
+    <div class="game col-md-4">
+        <p>
+            {{game.id}}.
+            {{game.game_name}}
+        </p>
+    </div>
+    <div class="col-md-5">
+        <p>
+            Company:
+            {{game.company}}
+
+            Genre:
+            {{game.genre}}
+        </p>
+    </div>
+    <div class="col-md-3">
+        ☑️: {{#if game.completed}} Completed {{else}} {{/if}}
+        ⭐: {{#if game.favorite}} Favorite {{else}} {{/if}}
+    </div>
+    {{/each}}
+
+    <script src="/js/addgame.js"></script>

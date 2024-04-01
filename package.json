@@ -1,12 +1,13 @@
 {
-    "name": "Web Wizaars",
+    "name": "Web-Wizaars",
     "version": "1.0.0",
     "description": "The ultimate gamer library portal!",
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node server.js",
-        "seed": "node seeds/index.js"
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
     },
     "author": "",
     "license": "ISC",
