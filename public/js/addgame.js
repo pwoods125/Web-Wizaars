@@ -11,10 +11,10 @@ async function newFormHandler(event) {
   const response = await fetch(`/api/games`, {
     method: 'POST',
     body: JSON.stringify({
-      gameName,
+      game_name: gameName,
       console,
       genre,
-      gameComments,
+      game_comments: gameComments,
       completed,
       favorite,
     }),
