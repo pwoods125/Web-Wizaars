@@ -37,12 +37,14 @@
         <br />
         <br />
         {{#if completed}}
-        <input type="checkbox" id="completed" name="completed" Completed />
+        <input type="checkbox" class="filled-in" checked="checked" Completed />
         {{else}}
         <input type="checkbox" id="completed" name="completed" />
         {{/if}}
-        <label for="completed">
-            Check box if you have completed this game!
+        <label>
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Check this box if you have completed this game!
+            </span>
         </label>
         <br />
         {{#if favorite}}
@@ -50,12 +52,13 @@
         {{else}}
         <input type="checkbox" id="favorite" name="favorite" />
         {{/if}}
-        <label for="favorite">
-            Check box if this is a favorite game!
+        <label>
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span> Check this box if this is a favorite game!
+            </span>
         </label>
         <br />
-        <button type="submit" value="Submit">
-            Submit
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
         </button>
     </form>
 </div>
