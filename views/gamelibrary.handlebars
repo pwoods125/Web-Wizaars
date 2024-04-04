@@ -7,26 +7,21 @@
             Your Game Library
         </h2>
     </div>
-    {{#each games as |game|}}
+    {{#each gamesLogged as |game|}}
     <div class="game col-md-4">
         <p>
-            {{game.id}}.
-            {{game.game_name}}
+            {{ this.id }}.
+            {{this.game_name}}
         </p>
     </div>
     <div class="col-md-5">
         <p>
-            Company:
-            {{game.company}}
-
-            Genre:
-            {{game.genre}}
+            Console: {{this.console}}
+            Genre: {{this.genre}}
         </p>
     </div>
     <div class="col-md-3">
-        ☑️: {{#if game.completed}} Completed {{else}} {{/if}}
-        ⭐: {{#if game.favorite}} Favorite {{else}} {{/if}}
+        ☑️: {{#if this.completed}} Completed {{else}} {{/if}}
+        ⭐: {{#if this.favorite}} Favorite {{else}} {{/if}}
     </div>
     {{/each}}
-
-    <script src="/js/addgame.js"></script>
