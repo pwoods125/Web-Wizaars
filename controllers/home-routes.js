@@ -19,6 +19,10 @@ router.get('/addgame', withAuth, async (req, res) => {
   res.render('addgame');
 });
 
+router.get('/profile', withAuth, async (req, res) => {
+  res.render('profile');
+});
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/landing');

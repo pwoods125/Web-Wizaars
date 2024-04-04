@@ -12,6 +12,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@bytescale/sdk": "^3.34.0",
         "bcrypt": "^5.0.0",
         "bootstrap": "^5.3.3",
         "bootstrap-icons": "^1.11.3",
@@ -24,5 +25,9 @@
         "materialize-css": "^1.0.0-rc.2",
         "mysql2": "^2.2.5",
         "sequelize": "^6.3.5"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.3"
     }
 }
+
