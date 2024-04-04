@@ -52,12 +52,6 @@ app.get('/landing', async (req, res) => {
   });
 });
 
-app.get('/upload', async (req, res) => {
-  res.render('upload', {
-    loggedIn: req.session.loggedIn,
-  });
-});
-
 app.get('/logout', async (req, res) => {
   res.render('login');
 });

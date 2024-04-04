@@ -1,67 +1,70 @@
-<div class="profile-container">
-  <h2>
+<div>
+  {{>primary}}
+</div>
+<div class="row" class="profile-container">
+  <h2 class="center-align #eceff1 blue-grey-text text-lighten-5">
     Setup your profile!
   </h2>
-  <form class="profile-form">
-    <label for="profile_name">
+  <form class="row" class="profile-form">
+    <label class="input-field col s6" for="profile_name">
       First Name
     </label>
     <br />
-    <input id="first_name" name="first_name" rows="2" cols="30">
+    <input id="first_name" name="first_name">
     {{firstname}}
     </input>
     <br />
-    <label for="profile_name">
+    <label class="input-field col s6" for="profile_name">
       Last Name
     </label>
     <br />
-    <input id="last_name" name="last_name" rows="2" cols="30">
+    <input id="last_name" name="last_name" rows="2" cols="10">
     {{lastname}}
     </input>
     <br />
-    <label for="about_me">
+    <label class="input-field col s6" for="about_me">
       About Me:
     </label>
     <br />
-    <input id="about_me" name="about_me" rows="5" cols="30">
+    <input id="about_me" name="about_me" rows="5" cols="10">
     {{aboutme}}
     </input>
     <br />
     <br />
-    <label for="psn_name">
+    <label class="input-field col s6" for="psn_name">
       PSN Username:
     </label>
     <br />
-    <input id="psn_name" name="psn_name" rows="2" cols="30">
+    <input id="psn_name" name="psn_name" rows="2" cols="10">
     {{usernamepsn}}
     </input>
     <br />
-    <label for="xbox_name">
+    <label class="input-field col s6" for="xbox_name">
       XBOX Username:
     </label>
     <br />
-    <input id="xbox_name" name="xbox_name" rows="2" cols="30">
+    <input id="xbox_name" name="xbox_name" rows="2" cols="10">
     {{usernamexbox}}
     </input>
     <br />
-    <label for="steam_name">
+    <label class="input-field col s6" for="steam_name">
       Steam Username:
     </label>
     <br />
-    <input id="steam_name" name="steam_name" rows="2" cols="30">
+    <input id="steam_name" name="steam_name" rows="2" cols="10">
     {{usernamesteam}}
     </input>
     <br />
-    <label for="nintendo_name">
+    <label class="input-field col s6" for="nintendo_name">
       Nintendo Username:
     </label>
     <br />
-    <input id="nintendo_name" name="nintendo_name" rows="2" cols="30">
+    <input id="nintendo_name" name="nintendo_name" rows="2" cols="10">
     {{usernamenintendo}}
     </input>
     <br />
-    <button type="submit" value="Submit">
-      Submit
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right"></i>
     </button>
   </form>
 </div>

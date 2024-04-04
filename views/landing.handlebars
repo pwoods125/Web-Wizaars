@@ -1,10 +1,27 @@
 <div>
-    <h2> Welcome Gamer! </h2>
-    <nav>
-        <a href="/games"> Game Library </a>
-    </nav>
+    {{>primary}}
 </div>
+<div class="profileDisplay-container">
+    <div class="card-header col-md-12 text-center #eceff1 blue-grey-text text-lighten-5">
+        <h3>
+            Your Profile
+        </h3>
+    </div>
 
+    <div>
+        <ul class="collection with-header">
+            <li class="collection-header">
+                <h4>{{this.firstname}} {{this.lastname}}</h4>
+            </li>
+            <li class="collection-item">About me: {{this.aboutme}}</li>
+            <li class="collection-item">PSN: {{usernamepsn}}</li>
+            <li class="collection-item">Xbox Gamertag: {{usernamexbox}}</li>
+            <li class="collection-item">Steam name: {{usernamesteam}}</li>
+            <li class="collection-item">Nintendo tag: {{usernamenintendo}}</li>
+        </ul>
+    </div>
+
+</div>
 
 
 <script src="/js/logout.js"></script>

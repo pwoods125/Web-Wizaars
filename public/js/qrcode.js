@@ -17,18 +17,12 @@ const generateSubmit = (e) => {
 };
 
 const generateQrCode = (url) => {
-  const qr = new QRCode(document.getElementById("qr-code"), {
-  text: url,
-  width: 300,
-  height: 300,
+  document.getElementById('qr-code', {
+    text: url,
+    width: 300,
+    height: 300,
   });
-  };
-  
-  
-  
-  
-  
-  
+};
 
 const clearQR = () => {
   qrCode.innerHTML = '';
