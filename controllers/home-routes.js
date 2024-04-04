@@ -15,18 +15,6 @@ router.get('/games', withAuth, async (req, res) => {
   }
 });
 
-router.get('/games/:id', withAuth, async (req, res) => {
-  try {
-    const gameData = await Games.findByPk(req.params.id);
-
-    const gamesLogged = gameData.map((game) => game.get({ plain: true }));
-    console.log(gamesLogged);
-    return res.render('gamelibrary', { gamesLogged });
-  } catch (err) {
-    return res.status(500).json(err);
-  }
-});
-
 router.get('/addgame', withAuth, async (req, res) => {
   res.render('addgame');
 });
