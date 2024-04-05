@@ -29,24 +29,7 @@ router.get('/profile', async (req, res) => {
   });
 });
 
-router.post('/', async (req, res) => {
-  try {
-    const profileData = await Profile.create({
-      firstname: req.body.firstname,
-      lastname: req.body.lastname,
-      aboutme: req.body.aboutme,
-      usernamepsn: req.body.usernamepsn,
-      usernamexbox: req.body.usernamexbox,
-      usernamesteam: req.body.usernamesteam,
-      usernamenintendo: req.body.usernamenintendo,
-    });
-    res.status(200).json(profileData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profiles', withAuth, async (req, res) => {
   try {
     const profileData = await Profile.findAll({});
     const profilePost = profileData.values((profile) =>
