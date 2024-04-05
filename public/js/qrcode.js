@@ -17,7 +17,8 @@ const generateSubmit = (e) => {
 };
 
 const generateQrCode = (url) => {
-  document.getElementById('qr-code', {
+  // eslint-disable-next-line no-new, no-undef
+  new QRCode(document.getElementById('qr-code'), {
     text: url,
     width: 300,
     height: 300,
